@@ -1,0 +1,81 @@
+<import src="goods-template/goods-template.wxml" />
+
+<view class="container">
+
+  <view class='search'>
+    <icon type='search' class='search-img' size='13' color='#405f80'></icon>
+    <input type='text' placeholder='搜索商品' placeholder-class='placeholder' bindfocus='onBindFocus' bindconfirm='onBindConfirm'></input>
+    <image wx:if="{{searchPanelShow}}" class='xx-img' src='/images/icons/xx.png' bindtap='onCancelImgTap'></image>
+  </view>
+
+  <view class="goods-tab-box" wx:if="{{containerShow}}">
+    <view class="goods-tab-nav {{curIndex === 0 ?'on':''}}" bindtap="bindTap" data-index="0">新品</view>
+    <view class="goods-tab-nav {{curIndex === 1 ?'on':''}}" bindtap="bindTap" data-index="1">人气</view>
+    <view class="goods-tab-nav {{curIndex === 2 ?'on':''}}" bindtap="bindTap" data-index="2">销量</view>
+    <view class="goods-tab-nav {{curIndex === 3 ?'on':''}}" bindtap="bindTap" data-index="3">价格</view>
+
+    <view class="goods-content">
+      <view wx:if="{{curIndex === 0}}" class='swiperBox'>
+        <swiper class='banner' catchtap="onSwiperTap" indicator-dots='true' autoplay="true" interval="3000">
+          <swiper-item>
+            <image mode='aspectFill' src='{{new_products[0].images.large}}' data-swiperid='{{new_products[0].id}}'></image>
+          </swiper-item>
+          <swiper-item>
+            <image mode='aspectFill' src='{{new_products[1].images.large}}' data-swiperid='{{new_products[1].id}}'></image>
+          </swiper-item>
+          <swiper-item>
+            <image mode='aspectFill' src='{{new_products[2].images.large}}' data-swiperid='{{new_products[2].id}}'></image>
+          </swiper-item>
+        </swiper>
+        <view class='content'>
+          <block wx:for="{{new_products}}" wx:for-item="item">
+            <view class='templateContainer' catchtap='onGoodsTap' data-goodsid='{{item.id}}'>
+              <template is='goodsItem' data='{{...item}}' />
+            </view>
+          </block>
+        </view>
+      </view>
+
+      <view wx:if="{{curIndex === 1}}">
+        <view class='content'>
+          <block wx:for="{{popular}}" wx:for-item="item">
+            <view class='templateContainer' catchtap='onGoodsTap' data-goodsid='{{item.id}}'>
+              <template is='goodsItem' data='{{...item}}' />
+            </view>
+          </block>
+        </view>
+      </view>
+
+      <view wx:if="{{curIndex === 2}}">
+        <view class='content'>
+          <block wx:for="{{sales}}" wx:for-item="item">
+            <view class='templateContainer' catchtap='onGoodsTap' data-goodsid='{{item.id}}'>
+              <template is='goodsItem' data='{{...item}}' />
+            </view>
+          </block>
+        </view>
+      </view>
+
+      <view wx:if="{{curIndex === 3}}">
+        <view class='content'>
+          <block wx:for="{{price}}" wx:for-item="item">
+            <view class='templateContainer' catchtap='onGoodsTap' data-goodsid='{{item.id}}'>
+              <template is='goodsItem' data='{{...item}}' />
+            </view>
+          </block>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='search-panel' wx:if="{{searchPanelShow}}">
+    <view class='content'>
+      <block wx:for="{{search}}" wx:for-item="item">
+        <view class='templateContainer' catchtap='onGoodsTap' data-goodsid='{{item.id}}'>
+          <template is='goodsItem' data='{{...item}}' />
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

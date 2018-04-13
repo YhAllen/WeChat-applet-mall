@@ -1,0 +1,10 @@
+<template name='goodsItem'>
+  <view class='goods-container'>
+    <image mode='aspectFill' class='goods-img' src='{{images.large}}'></image>
+    <text class='goods-title'>{{title}}</text>
+    <view class='price'>
+      <text class='goods-price'>￥{{rating.average}}</text>
+      <text class='pre-goods-price'>￥{{rating.max}}</text>
+    </view>
+  </view>
+</template>

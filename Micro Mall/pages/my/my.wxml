@@ -1,0 +1,29 @@
+<view class="main">
+  <view class="header">
+    <image src="{{thumb}}" class="thumb"></image>
+    <text class="nickname">{{nickname}}</text>
+  </view>
+  <view class="content">
+    <block wx:for='{{category}}'>
+      <navigator url="{{item.navigation}}">
+        <view class="orders">
+          <image src='{{item.iconLeft}}' class='leftIcon'></image>
+          <text class='category'>{{item.text}}</text>
+          <image class='rightIcon' src='{{item.iconRight}}'></image>
+        </view>
+      </navigator>
+    </block>
+  </view>
+
+
+  <block wx:for='{{about}}'>
+    <navigator url="{{item.navigation}}">
+      <view class="about">
+        <image src='{{item.iconLeft}}' class='leftIcon'></image>
+        <text class='category'>{{item.text}}</text>
+        <image class='rightIcon' src='{{item.iconRight}}'></image>
+      </view>
+    </navigator>
+  </block>
+
+</view>

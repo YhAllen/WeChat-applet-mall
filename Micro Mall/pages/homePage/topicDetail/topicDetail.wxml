@@ -1,0 +1,19 @@
+<import src="../../goods/goods-tempalte/goods-template.wxml" />
+
+
+<view class="container">
+  <view class='headerContainer'>
+    <image mode='aspectFill' src='{{postDetail.images.large}}'></image>
+    <text class='headerTitle'>{{postDetail.title}}</text>
+    <text class='headerDescription'>{{postDetail.summary}}</text>
+  </view>
+  <view class='goodsContainer'>
+    <block wx:for="{{postDetailItems}}" wx:for-item="item">
+      <view class='goodsItem' catchtap='onGoodsTap' data-goodsid='{{item.id}}'>
+         <image  mode='aspectFill' src='{{item.images.medium}}'></image> 
+        <text class='goodsTitle'>{{item.title}}</text>
+        <text class='price'>￥{{item.rating.average}}</text>
+      </view>
+    </block>
+  </view>
+</view>

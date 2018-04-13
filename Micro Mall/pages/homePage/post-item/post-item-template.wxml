@@ -1,0 +1,5 @@
+<template name='postItem'>
+  <view class='post-container'>
+    <image mode='aspectFill' src='{{images.large}}'></image>
+  </view>
+</template>

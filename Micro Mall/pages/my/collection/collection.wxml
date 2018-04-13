@@ -1,0 +1,11 @@
+<view class="container">
+   <block wx:for='{{goodsDetail}}'> 
+    <view class='item' catchtap='onGoodsTap' data-goodid='{{item.id}}'>
+    <image class='post' src='{{item.images.large}}'></image>
+    <view class='content'>
+      <text>{{item.title}}</text>
+      <text>￥{{item.rating.average}}</text>
+    </view>
+  </view>
+   </block> 
+</view>

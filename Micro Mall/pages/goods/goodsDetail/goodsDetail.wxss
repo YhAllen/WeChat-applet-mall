@@ -1,0 +1,106 @@
+page{
+  background-color: #ddd;
+  height: 100%;
+}
+.container{
+  height: 100%;
+}
+swiper{
+  width: 100%;
+  height: 500rpx;
+}
+swiper image{
+  width: 100%;
+  height: 500rpx;
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 80rpx;
+  line-height: 40rpx;
+  padding: 20rpx;
+  background-color: #eee;
+}
+
+.price{
+  color: red;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx 0 95rpx 0;
+  background-color: #eee;
+}
+.detail-title{
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.detail-content{
+  text-indent: 1rem;
+  margin-top: 15rpx;
+  height: 100%;
+}
+
+.footer{
+  position: fixed; 
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #eee;
+  border-top: 1px solid #ccc;
+}
+.img{
+  width: 13%;
+  padding: 5rpx 10rpx;
+  max-width: 100%;
+  height: 90rpx;
+  vertical-align: middle;
+  border-right: 1px solid #ccc; 
+}
+.footer text{
+  display:  inline-block;
+  vertical-align: middle;
+}
+ .addCart{
+  width: 47%;
+  height: 90rpx;
+  color: red;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 90rpx;
+}
+.buy{
+  display: inline-block; 
+  width: 30%;
+  height: 90rpx;
+  color: white;
+  background-color: black;
+  text-align: center;
+  line-height: 90rpx;
+}
+
+.numContainer{
+  padding: 0 10rpx;
+}
+
+.num{
+  display: inline-block; 
+  width: 20%;
+  height: 90rpx;
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+  line-height: 90rpx;
+  border-right: 1px solid #ccc;
+}
+
+.counts-icon{
+  height: 48rpx;
+  width: 48rpx;
+  vertical-align: middle;
+}

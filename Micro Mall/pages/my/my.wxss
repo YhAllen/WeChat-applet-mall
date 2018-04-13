@@ -1,0 +1,69 @@
+@import '../common/common.wxss';
+page{
+  height: 100%;
+  background-color: #f2f2f2;
+}
+.main{
+  height: 100%;
+}
+.header{
+    height: 400rpx;
+    line-height: 400rpx;
+    box-sizing: border-box; 
+    background: #AB956D;
+    font-size: 28rpx;
+    color: #fff;
+}
+
+.thumb{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -100rpx;
+  top: 100rpx; 
+  display: block;
+}
+.nickname{
+  position: absolute;
+  width: 100rpx;
+  left: 50%;
+  margin-left: -25rpx;
+  top: 130rpx;
+  font-size: 30rpx;
+}
+.content{
+  margin-top: 30rpx;
+  background-color: white;
+}
+.leftIcon{
+  width: 65rpx;
+  height: 65rpx;
+  padding: 20rpx;
+  vertical-align: middle;
+}
+
+.category{
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+.rightIcon{
+  width: 40rpx;
+  height: 40rpx;
+  padding: 36rpx 20rpx;
+  float: right;
+  vertical-align: middle;
+  clear: both;
+}
+
+.orders{
+  border-bottom: 1px solid #eee;
+}
+
+.about{
+  background-color: white;
+   margin-top: 30rpx; 
+  border-bottom: 1px solid #eee;
+}
+

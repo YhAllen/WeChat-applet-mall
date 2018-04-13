@@ -1,0 +1,42 @@
+<view class="container">
+  <view class='banner'>
+    <swiper indicator-dots='true' autoplay='true' interval='3000'>
+      <swiper-item>
+        <image mode='aspectFill' src='{{goodsDetail.images.large}}'></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class='title'>
+    <text>{{goodsDetail.title}}</text>
+    <text class='price'>￥{{goodsDetail.rating.average}}</text>
+  </view>
+  <view class='details'>
+    <text class='detail-title'>{{detailTitle}}</text>
+    <text class='detail-content'>{{goodsDetail.summary}}</text>
+  </view>
+  <view class='footer'>
+    <!-- <view> -->
+      <image class='img' src='{{cartIcon}}' catchtap='goCart'></image>
+    <!-- </view> -->
+    <!-- <view> -->
+      <image class='img' wx:if="{{collected}}" id='{{goodsDetail.id}}' catchtap='onCollectionTap' src='{{collectedIcon}}'></image>
+      <image class='img' wx:else id='{{goodsDetail.id}}' catchtap='onCollectionTap' src='{{collectIcon}}'></image>
+    <!-- </view> -->
+    <view class='num'>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{countsArray}}">
+        <view class='numContainer'>
+          <text class="counts-tips">数量</text>
+          <text class="counts-data">{{counts}}</text>
+          <image class="counts-icon" src="../../../images/icons/arrow@down.png"></image>
+        </view>
+      </picker>
+    </view>
+
+    <text class='addCart' id="{{goodsDetail.id}}" catchtap="onAddingToCartTap">加入购物车</text>
+    <!-- <text class="buy">立即购买</text> -->
+
+  </view>
+
+
+
+</view>

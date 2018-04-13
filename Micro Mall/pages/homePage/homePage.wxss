@@ -1,0 +1,6 @@
+@import "post-item/post-item-template.wxss";
+
+.container{
+  padding: 25rpx;
+  background-color: #fff;
+}

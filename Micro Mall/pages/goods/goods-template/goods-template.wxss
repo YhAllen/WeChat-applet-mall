@@ -1,0 +1,35 @@
+.goods-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+  text-align: center;
+}
+
+.goods-img {
+  width: 310rpx;
+  height: 310rpx;
+  padding-bottom: 20rpx;
+  margin: 0 auto;
+}
+
+.goods-title{
+    margin-bottom: 16rpx;
+    font-size: 24rpx;
+}
+
+.price{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.goods-price{
+    margin-bottom: 16rpx;
+    font-size: 24rpx;
+    color: red;
+}
+
+.pre-goods-price{
+  text-decoration: line-through;
+  margin-left: 10rpx;
+}
